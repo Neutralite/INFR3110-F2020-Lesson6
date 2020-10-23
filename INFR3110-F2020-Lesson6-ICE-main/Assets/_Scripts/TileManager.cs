@@ -10,12 +10,9 @@ public class TileManager : MonoBehaviour
 
     public int MaxTiles;
 
-
-
-
-
     // Start is called before the first frame update
-    void Start()
+    // Awake starts before start
+    void Awake()
     {
         // Initialize the pool of GameObjects
         m_TilePool = new Queue<GameObject>();
@@ -41,9 +38,11 @@ public class TileManager : MonoBehaviour
     /// <summary>
     /// Removes a GameObject tile from the pool
     /// </summary>
-    /// <returns></returns>
+    /// <returns name="tempTile"></returns>
     public GameObject GetTile()
     {
+        Debug.Log(m_TilePool.Count);
+
         var tempTile = m_TilePool.Dequeue();
         tempTile.SetActive(true);
         return tempTile;

@@ -717,7 +717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df39d4a8a8b4ce4ea38414f8472fbde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxTiles: 50
+  MaxTiles: 10000
 --- !u!1 &1757421711
 GameObject:
   m_ObjectHideFlags: 0
